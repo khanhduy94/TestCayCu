@@ -1,0 +1,9 @@
+c:\users\milkyway04\documents\visual studio 2015\Projects\TestCayCu\TestCayCu\bin\Debug\TestCayCu.exe.config
+c:\users\milkyway04\documents\visual studio 2015\Projects\TestCayCu\TestCayCu\bin\Debug\TestCayCu.exe
+c:\users\milkyway04\documents\visual studio 2015\Projects\TestCayCu\TestCayCu\bin\Debug\TestCayCu.pdb
+c:\users\milkyway04\documents\visual studio 2015\Projects\TestCayCu\TestCayCu\obj\Debug\TestCayCu.csprojResolveAssemblyReference.cache
+c:\users\milkyway04\documents\visual studio 2015\Projects\TestCayCu\TestCayCu\obj\Debug\TestCayCu.Form1.resources
+c:\users\milkyway04\documents\visual studio 2015\Projects\TestCayCu\TestCayCu\obj\Debug\TestCayCu.Properties.Resources.resources
+c:\users\milkyway04\documents\visual studio 2015\Projects\TestCayCu\TestCayCu\obj\Debug\TestCayCu.csproj.GenerateResource.Cache
+c:\users\milkyway04\documents\visual studio 2015\Projects\TestCayCu\TestCayCu\obj\Debug\TestCayCu.exe
+c:\users\milkyway04\documents\visual studio 2015\Projects\TestCayCu\TestCayCu\obj\Debug\TestCayCu.pdb

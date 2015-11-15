@@ -1,0 +1,3 @@
+C:\Users\MilkyWay04\Documents\Visual Studio 2015\Projects\TestCayCu\TestCayCu\bin\Debug\TestCayCu.exe.config
+C:\Users\MilkyWay04\Documents\Visual Studio 2015\Projects\TestCayCu\TestCayCu\obj\Debug\TestCayCu.exe
+C:\Users\MilkyWay04\Documents\Visual Studio 2015\Projects\TestCayCu\TestCayCu\obj\Debug\TestCayCu.pdb

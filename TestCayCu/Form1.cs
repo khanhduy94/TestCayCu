@@ -21,6 +21,7 @@ namespace TestCayCu
         }
 
         public TcpListener tcpListener;
+        public TcpListener tcpListener2;
         public string fileName;
         public string filePath;
         public IPAddress LocalAddress;
@@ -33,11 +34,7 @@ namespace TestCayCu
         {
             
         }
-
-        public void SendFile(string fileName)
-        {
             
-        }       
         public void listenClient()
         {
             LocalAddress = IPAddress.Parse("127.0.0.1");
@@ -53,6 +50,39 @@ namespace TestCayCu
                 fileName = sReader.ReadLine();
                 if (list_Files.Contains(fileName)&&fileName=="Quit") break;
                 list_Files.Add(fileName);
+				string Path="E:/" + fileName;              
+                FileStream InputFile = new FileStream(Path, FileMode.CreateNew, FileAccess.Write, FileShare.None);
+                BinaryWriter BinaryStream = new BinaryWriter(InputFile); 
+                byte[] data = new byte[BUFFER];
+                do
+                {
+                    socket.Receive(data);
+                    BinaryStream.Write(data);
+
+                } while (data.Length != 0);
+				BinaryStream.Flush();
+                BinaryStream.Close();
+                InputFile.Close();
+
+            }			
+        }
+		public void SendFile(string fileName)
+        {
+            tcpListener2 = new TcpListener(LocalAddress,PORT_SEND);
+            tcpListener2.Start();
+			
+			while(true)
+            {
+                Socket socket  = tcpListener2.AcceptSocket();
+
+
+                NetworkStream netStream = new NetworkStream(socket);
+                StreamWriter sWriter = new StreamWriter(netStream);
+				
+				string Path="E:/" + fileName; 
+                FileInfo File = new FileInfo(Path);
+                if (list_Files.Contains(fileName)&&fileName=="Quit") break;
+                list_Files.Add(fileName);
                 filePath= "E:/" + fileName;
                 FileStream InputFile = new FileStream(filePath, FileMode.CreateNew, FileAccess.Write, FileShare.None);
                 BinaryWriter BinaryStream = new BinaryWriter(InputFile); 
@@ -63,12 +93,12 @@ namespace TestCayCu
                     BinaryStream.Write(data);
 
                 } while (data.Length != 0);
+				BinaryStream.Flush();
                 BinaryStream.Close();
                 InputFile.Close();
 
-            }
-
-        }
+            }			
+        }   
        
     }
 }
